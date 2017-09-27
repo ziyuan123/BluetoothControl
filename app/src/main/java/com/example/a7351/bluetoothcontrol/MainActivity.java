@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -30,6 +32,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);//去掉标题栏
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);//去掉信息栏
+
         setContentView(R.layout.activity_main);
 
         tv= (TextView) findViewById(R.id.tv);
@@ -38,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         button5 = (Button) findViewById(R.id.FindBluetooth);
 
         lv = (ListView)findViewById(R.id.BlueToothList);
+//        lv.getBackground().getAlpha(40);
         mBluetoothAdapter= BluetoothAdapter.getDefaultAdapter();
 /*
 *   button test
@@ -78,6 +85,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+
+
 /*  获取已配对蓝牙设备
 *   一种很另类但是很简洁的触发方式
 *   button5触发

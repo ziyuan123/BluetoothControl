@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -33,15 +32,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE);//去掉标题栏
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);//去掉信息栏
+//        this.requestWindowFeature(Window.FEATURE_NO_TITLE);//去掉标题栏
+//        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);//去掉信息栏
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(R.layout.activity_main);
 
         tv= (TextView) findViewById(R.id.tv);
 
         button1 = (Button) findViewById(R.id.a1);
-        button5 = (Button) findViewById(R.id.FindBluetooth);
+        button5 = (Button) findViewById(R.id.a5);
 
         lv = (ListView)findViewById(R.id.BlueToothList);
 //        lv.getBackground().getAlpha(40);

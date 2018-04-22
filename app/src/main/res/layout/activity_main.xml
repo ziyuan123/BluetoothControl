@@ -26,7 +26,7 @@
         android:layout_alignRight="@+id/tv"
         android:layout_alignEnd="@+id/tv"></ListView>
 
-
+<!--滑动触屏检测部分-->
     <LinearLayout
         android:layout_width="160dp"
         android:layout_height="match_parent"
@@ -36,7 +36,8 @@
         android:layout_toRightOf="@+id/a1"
         android:layout_toEndOf="@+id/a1"
         android:layout_marginLeft="108dp"
-        android:layout_marginStart="108dp"></LinearLayout>
+        android:layout_marginStart="108dp"
+        android:orientation="vertical"></LinearLayout>
 
     <Button
         android:layout_width="100dp"
@@ -72,6 +73,7 @@
         android:layout_width="100dp"
         android:layout_height="60dp"
         android:id="@+id/a4"
+        android:text="ConnectBlueDevice"
         android:background="@drawable/button"
         android:layout_above="@+id/a5"
         android:layout_marginBottom="60dp"
@@ -81,9 +83,8 @@
     <Button
         android:layout_width="100dp"
         android:layout_height="60dp"
-        android:text="Check Blue  tooth"
-        android:onClick="list"
         android:id="@+id/a5"
+        android:text="Check Blue  tooth"
         android:background="@drawable/button"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
@@ -95,7 +96,7 @@
         android:layout_height="75dp"
         android:textColor="@color/colorPrimary"
         android:background="@drawable/box"
-        android:text="单击屏幕得到相应屏幕的位置"
+        android:text="滑动屏幕得到相应屏幕的位置"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/a1" />
 
